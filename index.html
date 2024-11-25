@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>محلل العملات الرقمية - Binance</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body class="dark-theme">
+    <header>
+        <div class="clock-container">
+            <div id="algerian-time"></div>
+        </div>
+        <div class="controls">
+            <select id="timeframe">
+                <option value="1m">1 دقيقة</option>
+                <option value="3m">3 دقائق</option>
+                <option value="5m">5 دقائق</option>
+                <option value="15m">15 دقيقة</option>
+                <option value="30m">30 دقيقة</option>
+                <option value="1h" selected>1 ساعة</option>
+                <option value="2h">2 ساعة</option>
+                <option value="4h">4 ساعات</option>
+                <option value="6h">6 ساعات</option>
+                <option value="8h">8 ساعات</option>
+                <option value="12h">12 ساعة</option>
+                <option value="1d">1 يوم</option>
+                <option value="3d">3 أيام</option>
+                <option value="1w">1 أسبوع</option>
+                <option value="1M">1 شهر</option>
+            </select>
+            <button id="toggleAnalysis" class="btn">بدء التحليل</button>
+            <button id="resetSettings" class="btn">إعادة الضبط</button>
+            <button id="refreshData" class="btn">تحديث</button>
+            <div class="sound-controls">
+                <label class="switch">
+                    <input type="checkbox" id="soundToggle" checked>
+                    <span class="slider"></span>
+                </label>
+                <span>التنبيه الصوتي</span>
+                <input type="range" id="volumeControl" min="0" max="100" value="50">
+            </div>
+        </div>
+    </header>
+
+    <main>
+        <div class="sort-controls">
+            <button class="sort-btn" data-sort="time">ترتيب حسب الوقت</button>
+            <button class="sort-btn" data-sort="tail">ترتيب حسب طول الذيل</button>
+            <button class="sort-btn" data-sort="price">ترتيب حسب السعر</button>
+        </div>
+
+        <div id="results" class="results-grid"></div>
+    </main>
+
+    <div id="modal" class="modal">
+        <div class="modal-content">
+            <span class="close">&times;</span>
+            <div id="modalContent"></div>
+        </div>
+    </div>
+
+    <footer>
+        <p>جميع الحقوق محفوظة &copy; 2024 خالد دراغة</p>
+        <p>للتواصل: gsmkhaledtiaret@gmail.com</p>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>
